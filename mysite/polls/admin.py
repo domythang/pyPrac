@@ -1,8 +1,7 @@
 from django.contrib import admin
 
-from .models import Question, Lhoice
+from .models import Question, Choice
 
 admin.site.register(Question)
 
-
-admin.site.register(Lhoice)
+admin.site.register(Choice)
