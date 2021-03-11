@@ -18,6 +18,7 @@ from django.conf.urls import include
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
+import blogapp.views
 
 
 urlpatterns = [
@@ -25,6 +26,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('blog/', include('blogapp.urls')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
+    path('oauth/', blogapp.views.oauth, name='oauth'),
 ]
 
 
