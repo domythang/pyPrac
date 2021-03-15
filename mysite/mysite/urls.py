@@ -19,14 +19,17 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 import blogapp.views
+from mysite import views
 
 
 urlpatterns = [
-    path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
-    path('blog/', include('blogapp.urls')),
+    path('', views.HomeView.as_view(), name='home'),
+    path('polls/', include('polls.urls')),
+    path('blogapp/', include('blogapp.urls')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
     path('oauth/', blogapp.views.oauth, name='oauth'),
+    path('books/', include('books.urls')),
 ]
 
 

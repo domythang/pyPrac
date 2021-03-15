@@ -24,16 +24,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'mwf)c=201%m^j-)=8(5gl=-zgg+w!q4a*h6)b)2v1lbwe6e+x)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['10.156.145.133']
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'blogapp.apps.BlogappConfig',
-    'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -42,6 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ckeditor',
     'ckeditor_uploader',
+    'blogapp.apps.BlogappConfig',
+    'polls.apps.PollsConfig',
+    'books.apps.BooksConfig',
+    #'books',
 ]
 
 CKEDITOR_UPLOAD_PATH = 'uploads/'
@@ -135,4 +137,29 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = 'media/'
+
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#     'formatters': {
+#         'verbose': {
+#             'format': "[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s",
+#             'datefmt': "%d/%b/%Y %H:%M:%S"
+#         },
+#     },
+#     'handlers': {
+#         'file': {
+#             'level': 'DEBUG',
+#             'class': 'logging.FileHandler',
+#             'filename': os.path.join(BASE_DIR, 'logs', 'mysite.log'),
+#             'formatter': 'verbose'
+#         },
+#         'loggers': {
+#             'polls': {
+#                 'handlers': ['file'],
+#                 'level': 'DEBUG',
+#             },
+#         },
+#     },       
+# }
 

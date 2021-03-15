@@ -37,6 +37,7 @@ def detail(request, blog_id):
         comment_form = BlogCommentForm(request.POST)
 
         if comment_form.is_valid():
+
             comment_form.save()
         
             content = comment_form.cleaned_data['comment_textfield']
