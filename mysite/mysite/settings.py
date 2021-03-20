@@ -26,7 +26,7 @@ SECRET_KEY = 'mwf)c=201%m^j-)=8(5gl=-zgg+w!q4a*h6)b)2v1lbwe6e+x)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['10.156.145.133']
+ALLOWED_HOSTS = ['10.156.145.133', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -133,7 +133,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'blogapp', 'static')
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'www_dir','static')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = 'media/'
@@ -150,7 +150,7 @@ MEDIA_ROOT = 'media/'
 #     'handlers': {
 #         'file': {
 #             'level': 'DEBUG',
-#             'class': 'logging.FileHandler',
+#             'class': 'logpging.FileHandler',
 #             'filename': os.path.join(BASE_DIR, 'logs', 'mysite.log'),
 #             'formatter': 'verbose'
 #         },
