@@ -4,7 +4,7 @@
 {% block title %}post_form.html{% endblock title %}
 
 {% block content %}
-    <h1>Post Create/Update = {{user}}</h1>
+    <h1>Post Create/Update - {{user}}</h1>
     <p>This is a creation or update form for your post.</p>
 
     {% if form.errors %}
@@ -17,14 +17,14 @@
     <form action="." method="post" class="card pt-3">{% csrf_token %}
 
         <div class="form-group row">
-            {{ form.title|add_label_class:"col-form-label col-sm-2 ml-3" }}
+            {{ form.title|add_label_class:"col-form-label col-sm-2 mb-3" }}
             <div class="col-sm-5">
                 {{ form.title|add_class:"form-control"|attr:"autofocus" }}
             </div>
         </div>
 
         <div class="form-group row">
-            {{ form.slug|add_label_class:"col-form-label col-sm-2 ml-3" }}
+            {{ form.slug|add_label_class:"col-form-label col-sm-2 mb-3" }}
             <div class="col-sm-5">
                 {{ form.slug|add_class:"form-control"|attr:"readonly" }}
             </div>
@@ -32,23 +32,22 @@
         </div>
 
         <div class="form-group row">
-            {{ form.discription|add_label_class:"col-form-label col-sm-2 ml-3" }}
+            {{ form.description|add_label_class:"col-form-label col-sm-2 ml-3" }}
             <div class="col-sm-5">
                 {{ form.description|add_class:"form-control" }}
             </div>
-            <small class="form-text text-muted">{{ form.description.help_text }}</small>
+            <small class="form-text text-muted" style="display: inline;">{{ form.description.help_text }}</small>
         </div>
         
         <div class="form-group row">
-            {{ form.content|add_label_class:"col-form-label col-sm-2 ml-3" }}
-
+            {{ form.content|add_label_class:"col-form-label col-sm-2 mb-3" }}
             <div class="col-sm-8">
-                {{ form.content|add_class:"form-control" }}
+                {{ form.content|add_class:"form-control mb-3" }}
             </div>
         </div>
 
         <div class="form-group row">
-            {{ form.tags|add_label_class:"col-form-label col-sm-2 ml-3" }}
+            {{ form.tags|add_label_class:"col-form-label col-sm-2" }}
             <div class="col-sm-5">
                 {{ form.tags|add_class:"form-control" }}
             </div>

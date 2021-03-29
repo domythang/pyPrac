@@ -41,8 +41,8 @@
                         <li><a class="dropdown-item" href="{% url 'bookmark:add' %}">Bookmark</a></li>
                         <li><a class="dropdown-item" href="{% url 'blog:add' %}">Post</a></li>
                         <li><div class="dropdown-divider"></div></li>
-                        <li><a class="dropdown-item" href="">Album</a></li>
-                        <li><a class="dropdown-item" href="">Photo</a></li>
+                        <li><a class="dropdown-item" href="#">Album</a></li>
+                        <li><a class="dropdown-item" href="#">Photo</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown mx-1 btn btn-primary">
@@ -51,8 +51,8 @@
                         <li><a class="dropdown-item" href="{% url 'bookmark:change' %}">Bookmark</a></li>
                         <li><a class="dropdown-item" href="{% url 'blog:change' %}">Post</a></li>
                         <li><div class="dropdown-divider"></div></li>
-                        <li><a class="dropdown-item" href="">Album</a></li>
-                        <li><a class="dropdown-item" href="">Photo</a></li>
+                        <li><a class="dropdown-item" href="#">Album</a></li>
+                        <li><a class="dropdown-item" href="#">Photo</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown mx-1 btn btn-primary">
@@ -84,9 +84,9 @@
                     <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown">
                         <i class="fas fa-user"></i>&ensp;Anonymous&ensp;
                     </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-items" href="{% url 'login' %}">Login</a>
-                        <a class="dropdown-items" href="{% url 'register' %}">Register</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{% url 'login' %}">Login</a>
+                        <a class="dropdown-item" href="{% url 'register' %}">Register</a>
                     </div>
                     {% endif %}
                 </li>

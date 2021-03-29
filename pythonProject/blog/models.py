@@ -9,7 +9,7 @@ class Post(models.Model):
     slug = models.SlugField('SLUG', unique=True, allow_unicode=True, help_text='one word for title alias.') # 3
     description = models.CharField('DESCIPTION', max_length=50, blank=True, help_text='simple description text.') # 4
     content = models.TextField('CONTENT') # 5
-    create_dt = models.DateTimeField('CREATE DATE', auto_now_add=False) # 6
+    create_dt = models.DateTimeField('CREATE DATE', auto_now_add=True) # 6
     modify_dt = models.DateTimeField("MODIFY DATE", auto_now=True) # 7
     tags = TaggableManager(blank=True)
     owner = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name="OWNER", blank=True, null=True)
