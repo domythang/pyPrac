@@ -1,4 +1,6 @@
 venv/
 media/
-/.vscode
+.vscode/
 db.sqlite3
+static/
+settings.py
